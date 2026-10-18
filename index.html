@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Vakit Gizlilik Politikası</title>
+<style>
+:root{--bg:#f7f5f0;--fg:#1f2421;--muted:#5b625e;--card:#ffffff;--line:#e2ded4;--accent:#1f6f5c}
+@media (prefers-color-scheme:dark){:root{--bg:#141716;--fg:#e8ebe9;--muted:#a3aaa6;--card:#1d2120;--line:#2e3432;--accent:#6fc7ad}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+main{max-width:720px;margin:0 auto;padding:24px 16px 48px}
+header{border-bottom:1px solid var(--line);padding-bottom:16px;margin-bottom:8px}
+.app{margin:0;font-size:2rem;line-height:1.2;color:var(--accent)}
+.dev{margin:4px 0 0;color:var(--muted)}
+h1{font-size:1.4rem;margin:20px 0 4px}
+h2{font-size:1.1rem;margin:28px 0 8px}
+p,ul{margin:0 0 12px}
+ul{padding-left:1.2em}
+li{margin-bottom:6px}
+a{color:var(--accent);overflow-wrap:anywhere}
+.date{color:var(--muted);font-size:.95rem}
+.box{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+</style>
+</head>
+<body>
+<main>
+<header>
+<p class="app">Vakit</p>
+<p class="dev">Geliştirici: Mehmet Hazar Aksoy</p>
+</header>
+
+<h1>Gizlilik Politikası</h1>
+<p class="date">Yürürlük tarihi: 18 Ekim 2026</p>
+
+<h2>1. Kimiz?</h2>
+<p>Bu politika, Android için Vakit uygulamasını kapsar. Uygulamanın geliştiricisi ve veri sorumlusu Mehmet Hazar Aksoy'dur.</p>
+<p>Uygulama kullanıcı hesabı istemez; ad, e-posta veya telefon numarası toplamaz.</p>
+<p class="box">İletişim: <a href="mailto:paladinsvideos@gmail.com">paladinsvideos@gmail.com</a></p>
+
+<h2>2. Konum</h2>
+<ul>
+<li>Konumunuz yalnız siz izin verirseniz kullanılır. İzin vermeden de il veya ilçeyi elle seçebilirsiniz.</li>
+<li>Konum; namaz vakitlerini ve kıble yönünü hesaplamak ve bulunduğunuz ilçenin adını göstermek için kullanılır.</li>
+<li>Koordinatlar, vakit hesabı için AlAdhan servisine gönderilir.</li>
+<li>Yalnız "Konumumu kullan" ile alınan konumda, ilçe adını bulmak için koordinatlar ArcGIS Türkiye ilçe sınırları servisine de gönderilir.</li>
+<li>Vakit hatırlatması açıksa, uygulama planı güncel tutmak için günde bir kez arka planda kayıtlı konumla AlAdhan'a bağlanır.</li>
+<li>İl/ilçe araması cihazdaki listeden yapılır; yazdığınız ad internete gönderilmez.</li>
+<li>Bu servisler, bağlantının doğası gereği IP adresi gibi teknik bilgileri görebilir.</li>
+<li>Bu servisler Türkiye dışında bulunabilir; koordinatlar ve teknik bilgiler yurt dışına aktarılabilir.</li>
+</ul>
+
+<h2>3. Cihazda saklananlar</h2>
+<p>Aşağıdaki bilgiler cihazınızda saklanır ve geliştiriciye gönderilmez. Yalnızca Bölüm 2'de anlatılan servislere, vakit hesabı için koordinat gönderilir:</p>
+<ul>
+<li>Seçtiğiniz yer</li>
+<li>Uygulama tercihleriniz</li>
+<li>Alarm (hatırlatma) planı</li>
+<li>En fazla 40 günlük namaz vakti önbelleği</li>
+<li>Kur'an okuma yeriniz</li>
+</ul>
+
+<h2>4. Reklam</h2>
+<ul>
+<li>Uygulamada Google AdMob reklamları gösterilir. AdMob; reklam kimliği, cihaz ve ağ bilgisi ile reklam etkileşimlerini işleyebilir.</li>
+<li>Konumunuz veya namaz tercihleriniz reklam isteğine eklenmez.</li>
+<li>Reklamlar yalnız Bugün ve Takvim ekranlarında gösterilir; ezan çalarken ve Kur'an ekranında gösterilmez.</li>
+<li>Avrupa Birliği, İngiltere ve İsviçre'deki kullanıcılara Google'ın onay mesajı (UMP) gösterilir. Seçiminizi daha sonra <strong>Ayarlar &gt; Reklam gizlilik tercihleri</strong> bölümünden değiştirebilirsiniz.</li>
+<li>Google'ın verileri nasıl kullandığı: <a href="https://policies.google.com/technologies/partner-sites">policies.google.com/technologies/partner-sites</a></li>
+<li>AdMob'un veri işlemesi Google'ın kendi gizlilik politikasına tabidir.</li>
+</ul>
+
+<h2>5. İzinler</h2>
+<ul>
+<li><strong>Konum</strong> (isteğe bağlı): vakit, kıble ve ilçe adı için.</li>
+<li><strong>Bildirim</strong>: vakit hatırlatmalarını göstermek için.</li>
+<li><strong>Kesin alarm</strong> (Alarmlar ve hatırlatıcılar): hatırlatmanın tam vaktinde çalması için.</li>
+<li><strong>Ön plan ses hizmeti</strong>: ezan sesini çalmak için.</li>
+</ul>
+<p>Konum iznini reddederseniz yeri elle seçebilirsiniz. İzinleri istediğiniz zaman cihazınızın ayarlarından değiştirebilirsiniz.</p>
+
+<h2>6. Verilerin silinmesi</h2>
+<p>Cihaz ayarlarından uygulama verisini temizlemek, cihazda saklanan tüm Vakit verilerini siler. Uygulamayı kaldırmak da aynı sonucu verir.</p>
+
+<h2>7. Çocuklar</h2>
+<p>Uygulama çocuklara yönelik değildir.</p>
+
+<h2>8. Destek</h2>
+<p>Destek için e-posta ile yazabilirsiniz. Destek yazışmaları, talep kapandıktan sonra 6 ay saklanır ve ardından silinir.</p>
+
+<h2>9. KVKK kapsamındaki haklarınız</h2>
+<p>6698 sayılı Kişisel Verilerin Korunması Kanunu kapsamında şu haklara sahipsiniz:</p>
+<ul>
+<li>Kişisel verinizin işlenip işlenmediğini öğrenme</li>
+<li>İşlenmişse bilgi isteme</li>
+<li>Eksik veya yanlış işlenmişse düzeltilmesini isteme</li>
+<li>Silinmesini isteme</li>
+<li>İşlemeye itiraz etme</li>
+<li>Verilerin aktarıldığı üçüncü kişileri öğrenme</li>
+<li>İşlemenin sonucunda aleyhe bir sonuç doğarsa itiraz etme</li>
+<li>Kanuna aykırı işlemeden doğan zararın giderilmesini isteme</li>
+</ul>
+<p>Başvurularınızı e-posta ile iletebilirsiniz: <a href="mailto:paladinsvideos@gmail.com">paladinsvideos@gmail.com</a></p>
+
+<h2>10. Yürürlük</h2>
+<p>Bu politika 18 Ekim 2026 tarihinde yürürlüğe girmiştir. Değişiklik olursa bu sayfa güncellenir.</p>
+</main>
+</body>
+</html>
