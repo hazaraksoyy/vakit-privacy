@@ -3,128 +3,94 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="color-scheme" content="light dark">
-<title>Vakit Gizlilik Politikası</title>
+<title>Vakit · Gizlilik Politikası</title>
 <style>
-:root{--bg:#f7f5f0;--fg:#1f2421;--muted:#5b625e;--card:#ffffff;--line:#e2ded4;--accent:#1f6f5c}
-@media (prefers-color-scheme:dark){:root{--bg:#141716;--fg:#e8ebe9;--muted:#a3aaa6;--card:#1d2120;--line:#2e3432;--accent:#6fc7ad}}
-*{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
-main{max-width:720px;margin:0 auto;padding:24px 16px 48px}
-header{border-bottom:1px solid var(--line);padding-bottom:16px;margin-bottom:8px}
-.app{margin:0;font-size:2rem;line-height:1.2;color:var(--accent)}
-.dev{margin:4px 0 0;color:var(--muted)}
-h1{font-size:1.4rem;margin:20px 0 4px}
-h2{font-size:1.1rem;margin:28px 0 8px}
-p,ul{margin:0 0 12px}
-ul{padding-left:1.2em}
-li{margin-bottom:6px}
-a{color:var(--accent);overflow-wrap:anywhere}
-.date{color:var(--muted);font-size:.95rem}
-.box{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+  :root { --bg:#F5F6F2; --fg:#13201A; --muted:#4C5B54; --accent:#1E5A46; --card:#FFFFFF; --line:#DCE2DA; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#0D1411; --fg:#ECF2EE; --muted:#A7B6AE; --accent:#6DC7A5; --card:#151F1A; --line:#293731; } }
+  body { margin:0; background:var(--bg); color:var(--fg); font:17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  main { max-width:760px; margin:0 auto; padding:24px 16px 64px; }
+  h1 { font-size:30px; margin:8px 0 4px; } h2 { font-size:21px; margin:32px 0 8px; color:var(--accent); }
+  .meta { color:var(--muted); font-size:15px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:16px; padding:16px 20px; margin:16px 0; }
+  table { border-collapse:collapse; width:100%; font-size:15px; } td, th { border-bottom:1px solid var(--line); padding:8px 6px; text-align:left; vertical-align:top; }
+  a { color:var(--accent); }
 </style>
 </head>
 <body>
 <main>
-<header>
-<p class="app">Vakit</p>
-<p class="dev">Geliştirici: Mehmet Hazar Aksoy</p>
-</header>
-
+<p class="meta">Vakit · Geliştirici: Mehmet Hazar Aksoy</p>
 <h1>Gizlilik Politikası</h1>
-<p class="date">Yürürlük tarihi: 19 Ekim 2026</p>
+<p class="meta">Yürürlük tarihi: 21 Ekim 2026</p>
+
+<div class="card">
+<strong>Kısaca:</strong> Hesap açmanız gerekmez; ad, e-posta veya telefon numaranızı istemeyiz. Namaz vakitleri telefonunuzda hesaplanır. Konumunuz sunucumuza gönderilmez (bir sunucumuz yok). Bazı özellikler için konum ya da il/ilçe bilgisi aşağıda adı geçen servislere gider. Uygulamada Google AdMob ile küçük reklamlar gösterilir; çocuk modunda reklam gösterilmez.
+</div>
 
 <h2>1. Kimiz?</h2>
-<p>Bu politika, Android için Vakit uygulamasını kapsar. Uygulamanın geliştiricisi ve veri sorumlusu Mehmet Hazar Aksoy'dur.</p>
-<p>Uygulama kullanıcı hesabı istemez; ad, e-posta veya telefon numarası toplamaz.</p>
-<p class="box">İletişim: <a href="mailto:paladinsvideos@gmail.com">paladinsvideos@gmail.com</a></p>
+<p>Bu politika Android için <strong>Vakit</strong> uygulamasını (paket adı <code>com.hazar.ezanvakti</code>) kapsar. Veri sorumlusu Mehmet Hazar Aksoy'dur. İletişim: <a href="mailto:paladinsvideos@gmail.com">paladinsvideos@gmail.com</a></p>
 
-<h2>2. Konum</h2>
+<h2>2. Telefonunuzda kalanlar</h2>
+<p>Aşağıdakiler yalnızca telefonunuzda saklanır ve bize gönderilmez:</p>
 <ul>
-<li>Konumunuz yalnız siz izin verirseniz kullanılır. İzin vermeden de il veya ilçeyi elle seçebilirsiniz.</li>
-<li>Konum; namaz vakitlerini ve kıble yönünü hesaplamak ve bulunduğunuz ilçenin adını göstermek için kullanılır.</li>
-<li>Koordinatlar, vakit hesabı için AlAdhan servisine gönderilir.</li>
-<li>Yalnız "Konumumu kullan" ile alınan konumda, ilçe adını bulmak için koordinatlar ArcGIS Türkiye ilçe sınırları servisine de gönderilir.</li>
-<li>Vakit hatırlatması açıksa, uygulama planı güncel tutmak için günde bir kez arka planda kayıtlı konumla AlAdhan'a bağlanır.</li>
-<li>İstanbul'da nöbetçi eczane listesi için İstanbul Eczacı Odası'na yalnız ilçe adı gönderilir; koordinat gönderilmez. İlçe, elle seçtiğiniz İstanbul ilçesinden veya "Konumumu kullan" ile bulunan ilçe adından gelir.</li>
-<li>İl/ilçe araması cihazdaki listeden yapılır; yazdığınız ad internete gönderilmez.</li>
-<li>Bu servisler, bağlantının doğası gereği IP adresi gibi teknik bilgileri görebilir.</li>
-<li>Bu servisler Türkiye dışında bulunabilir; koordinatlar ve teknik bilgiler yurt dışına aktarılabilir.</li>
+  <li>Seçtiğiniz ya da konumla bulunan yer (il, ilçe, semt ve koordinatlar)</li>
+  <li>Uygulama ayarları, ezan ve uyarı tercihleri, kurulan alarm planı</li>
+  <li>Zikir sayaçları, kaza takibi, Kur'an okuma yeriniz ve yer imleriniz</li>
+  <li>Cami ve eczane listesinin son güncel kopyası</li>
 </ul>
+<p>Namaz vakti hesabı, kıble yönü, il/ilçe araması, Kur'an metni ve cami/eczane listesi internet olmadan, telefonda çalışır. Pusula sensörü verisi yalnızca telefonda işlenir.</p>
 
-<h2>3. Dış bağlantılar</h2>
-<p>Uygulamadaki bazı bağlantılar (örneğin Google Kıble Bulucu) sizi tarayıcıda başka sitelere götürür. Vakit bu bağlantılara konumunuzu eklemez; yalnız nöbetçi eczane Google bağlantısı, siz dokunduğunuzda seçili yerin il ve ilçe adını arama sözcüğü olarak içerir; eczane yol tarifi bağlantısı eczanenin konumunu (koordinatını) içerir, sizin konumunuzu içermez. Yol tarifinin başlangıç noktasını Google Haritalar kendisi belirler. Bu sitelerin kendi gizlilik politikaları geçerlidir.</p>
-<p>Uygulamadaki dış bağlantılar:</p>
-<ul>
-<li>Google Kıble Bulucu</li>
-<li>Diyanet Kur'an-ı Kerim sitesi (ayet, meal ve tefsir sayfaları)</li>
-<li>Diyanet Kur'an Radyo</li>
-<li>İstanbul Eczacı Odası nöbetçi eczane sayfası</li>
-<li>Google Haritalar (eczane yol tarifi; bağlantıya yalnız eczanenin konumu eklenir)</li>
-<li>Google arama (nöbetçi eczane; il ve ilçe adı)</li>
-<li>Diyanet namaz vakitleri sitesi ve Diyanet dinî günler takvimi</li>
-<li>YouTube (ezan adayı kayıtları)</li>
-<li>Google'ın reklam verileri sayfası</li>
-<li>Uygulamadaki Lisanslar sayfasından açılan kaynak ve lisans bağlantıları (AlAdhan, GeoNames, Wikidata, ArcGIS, e-İçişleri, Tanzil Project, Wikimedia Commons, Freesound, Creative Commons)</li>
-</ul>
+<h2>3. Konum</h2>
+<p>Konum izni isteğe bağlıdır; izin vermezseniz il ve ilçenizi elle seçebilirsiniz. Konum; namaz vakitlerini ve kıble yönünü hesaplamak, bulunduğunuz ilçe ve semtin adını göstermek ve size yakın cami ile eczaneleri sıralamak için kullanılır.</p>
 
-<h2>4. Cihazda saklananlar</h2>
-<p>Aşağıdaki bilgiler cihazınızda saklanır ve geliştiriciye gönderilmez. Yalnızca Bölüm 2'de anlatılan servislere, vakit hesabı için koordinat gönderilir:</p>
-<ul>
-<li>Seçtiğiniz yer</li>
-<li>Uygulama tercihleriniz</li>
-<li>Alarm (hatırlatma) planı</li>
-<li>En fazla 40 günlük namaz vakti önbelleği</li>
-<li>Kur'an okuma yeriniz</li>
-</ul>
-<p>Pusula sensör verisi yalnız cihazda işlenir, gönderilmez.</p>
+<h2>4. İnternete giden bilgiler</h2>
+<table>
+  <tr><th>Ne zaman</th><th>Nereye</th><th>Ne gönderilir</th></tr>
+  <tr><td>Ana ekranda hava durumu gösterilirken</td><td>Open-Meteo (open-meteo.com)</td><td>Seçili yerin koordinatları</td></tr>
+  <tr><td>"Konumumu kullan" ya da yakın cami/eczane ekranında semt adı bulunurken</td><td>Telefonunuzun adres servisi (Android; Google)</td><td>Konum koordinatları</td></tr>
+  <tr><td>Nöbetçi eczaneler açıldığında</td><td>e-Devlet Kapısı (turkiye.gov.tr), Sağlık Bakanlığı TİTCK sorgusu</td><td>İl ve ilçe adı, sorgu günü</td></tr>
+  <tr><td>Cami/eczane listesinde "Yenile"ye basıldığında</td><td>OpenStreetMap Overpass sunucuları</td><td>Koordinatlar ve 3 km'lik arama alanı</td></tr>
+  <tr><td>"Yol tarifi" ya da telefon düğmesine basıldığında</td><td>Google Haritalar / telefonunuzun arama uygulaması</td><td>Gidilecek yerin adı/adresi ya da aranan numara</td></tr>
+  <tr><td>Kur'an ekranında "Dinle"ye basıldığında</td><td>Islamic Network (cdn.islamic.network)</td><td>Yalnızca okunacak ayetin ses dosyası istenir; kişisel bilgi gönderilmez</td></tr>
+  <tr><td>Reklam gösterilirken</td><td>Google AdMob</td><td>Bölüm 5'e bakın</td></tr>
+</table>
+<p>Bu servisler, bağlantının doğası gereği IP adresiniz gibi teknik bilgileri görebilir ve Türkiye dışında bulunabilir; bu nedenle bilgiler yurt dışına aktarılabilir. Her servisin kendi gizlilik politikası geçerlidir.</p>
 
-<h2>5. Reklam</h2>
+<h2>5. Reklamlar (Google AdMob)</h2>
 <ul>
-<li>Uygulamada Google AdMob reklamları gösterilir. AdMob; reklam kimliği, cihaz ve ağ bilgisi ile reklam etkileşimlerini işleyebilir.</li>
-<li>Konumunuz veya namaz tercihleriniz reklam isteğine eklenmez.</li>
-<li>Reklamlar yalnız Bugün ve Takvim ekranlarında gösterilir; ezan çalarken ve Kur'an ekranında gösterilmez.</li>
-<li>Avrupa Birliği, İngiltere ve İsviçre'deki kullanıcılara Google'ın onay mesajı (UMP) gösterilir. Seçiminizi daha sonra <strong>Ayarlar &gt; Reklam gizlilik tercihleri</strong> bölümünden değiştirebilirsiniz.</li>
-<li>Google'ın verileri nasıl kullandığı: <a href="https://policies.google.com/technologies/partner-sites">policies.google.com/technologies/partner-sites</a></li>
-<li>AdMob'un veri işlemesi Google'ın kendi gizlilik politikasına tabidir.</li>
-<li>Reklam kimliğinizi sıfırlayabilir veya reklam kişiselleştirmesini cihazınızın Google ayarlarından kapatabilirsiniz.</li>
+  <li>Uygulamada Google AdMob ile küçük bant reklamlar gösterilir. AdMob; reklam kimliği, cihaz ve ağ bilgisi (IP adresi dahil) ile reklam etkileşimlerini işleyebilir.</li>
+  <li>Konumunuz, namaz tercihleriniz veya uygulamadaki içerikleriniz tarafımızdan reklam isteğine eklenmez.</li>
+  <li>Reklamlar yalnızca Takvim, Camiler/Eczaneler, Nöbetçi eczaneler, Şehirlerim, Ezan sesleri ve Ayarlar ekranlarının altında gösterilir. Açılışta, ana ekranda, Kur'an, kıble, zikir ve kaza ekranlarında ve ezan çalarken reklam yoktur. Tam ekran reklam kullanılmaz.</li>
+  <li>Çocuk modunda reklam gösterilmez ve reklam sistemi hiç başlatılmaz.</li>
+  <li>Avrupa Birliği, İngiltere ve İsviçre'deki kullanıcılara Google'ın onay penceresi gösterilir. Seçiminizi sonradan <em>Ayarlar → Reklam gizlilik tercihleri</em> bölümünden değiştirebilirsiniz.</li>
+  <li>Reklam kimliğinizi sıfırlayabilir ya da kişiselleştirilmiş reklamları telefonunuzun Google ayarlarından kapatabilirsiniz.</li>
+  <li>Google'ın verileri nasıl kullandığı: <a href="https://policies.google.com/technologies/partner-sites">policies.google.com/technologies/partner-sites</a></li>
 </ul>
 
 <h2>6. İzinler</h2>
-<ul>
-<li><strong>Konum</strong> (isteğe bağlı): vakit, kıble ve ilçe adı için.</li>
-<li><strong>Bildirim</strong>: vakit hatırlatmalarını göstermek için.</li>
-<li><strong>Kesin alarm</strong> (Alarmlar ve hatırlatıcılar): hatırlatmanın tam vaktinde çalması için.</li>
-<li><strong>Ön plan ses hizmeti</strong>: ezan sesini çalmak için.</li>
-</ul>
-<p>Konum iznini reddederseniz yeri elle seçebilirsiniz. İzinleri istediğiniz zaman cihazınızın ayarlarından değiştirebilirsiniz.</p>
+<table>
+  <tr><th>İzin</th><th>Neden</th></tr>
+  <tr><td>Konum (isteğe bağlı)</td><td>Vakit, kıble, ilçe/semt adı ve yakın cami/eczane</td></tr>
+  <tr><td>Bildirim</td><td>Ezan ve "vakte 15 dakika kaldı" uyarıları</td></tr>
+  <tr><td>Alarmlar ve hatırlatıcılar (tam zamanlı alarm)</td><td>Ezanın tam vaktinde çalması</td></tr>
+  <tr><td>Ön plan ses hizmeti, uyandırma, açılışta başlatma</td><td>Telefon kilitliyken ve yeniden başlatıldıktan sonra da ezanın çalması</td></tr>
+  <tr><td>Tam ekran bildirim (isteğe bağlı)</td><td>Kilit ekranında büyük "Sustur" düğmesi</td></tr>
+  <tr><td>Rahatsız Etmeyin erişimi (isteğe bağlı)</td><td>Namaz süresince telefonu titreşime almak</td></tr>
+  <tr><td>Titreşim</td><td>Uyarılar, kıbleye dönünce ve zikirde titreşim</td></tr>
+  <tr><td>İnternet, reklam kimliği</td><td>Bölüm 4 ve 5'teki işlevler</td></tr>
+</table>
+<p>İzinleri istediğiniz zaman telefonunuzun ayarlarından değiştirebilirsiniz.</p>
 
-<h2>7. Verilerin silinmesi</h2>
-<p>Cihaz ayarlarından uygulama verisini temizlemek, cihazda saklanan tüm Vakit verilerini siler. Uygulamayı kaldırmak da aynı sonucu verir.</p>
+<h2>7. Çocuklar</h2>
+<p>Uygulama genel kullanıcılara yöneliktir. Bir yetişkinin çocuğu için açabileceği isteğe bağlı bir "Çocuk modu" vardır; bu modda reklam gösterilmez ve reklam sistemi başlatılmaz. Çocuklardan bilerek kişisel veri toplamayız.</p>
 
-<h2>8. Çocuklar</h2>
-<p>Uygulama çocuklara yönelik değildir.</p>
+<h2>8. Verilerin silinmesi</h2>
+<p>Telefonunuzun ayarlarından uygulama verisini temizlemek ya da uygulamayı kaldırmak, telefonda saklanan tüm Vakit verilerini siler. Bizde sizinle ilgili saklanan bir kayıt yoktur. Google'ın reklam verileri için Google hesabı ve cihaz ayarlarınızı kullanabilirsiniz.</p>
 
-<h2>9. Destek</h2>
-<p>Destek için e-posta ile yazabilirsiniz. Destek yazışmaları, talep kapandıktan sonra en geç 6 ay içinde silinir.</p>
+<h2>9. KVKK kapsamındaki haklarınız</h2>
+<p>6698 sayılı Kişisel Verilerin Korunması Kanunu'nun 11. maddesi kapsamında; verinizin işlenip işlenmediğini öğrenme, bilgi isteme, düzeltme ve silinmesini isteme, aktarıldığı üçüncü kişileri öğrenme, itiraz etme ve zararın giderilmesini isteme haklarına sahipsiniz. Başvurularınızı <a href="mailto:paladinsvideos@gmail.com">paladinsvideos@gmail.com</a> adresine iletebilirsiniz. Destek yazışmaları, talep kapandıktan sonra en geç 6 ay içinde silinir.</p>
 
-<h2>10. KVKK kapsamındaki haklarınız</h2>
-<p>6698 sayılı Kişisel Verilerin Korunması Kanunu kapsamında şu haklara sahipsiniz:</p>
-<ul>
-<li>Kişisel verinizin işlenip işlenmediğini öğrenme</li>
-<li>İşlenmişse bilgi isteme</li>
-<li>Eksik veya yanlış işlenmişse düzeltilmesini isteme</li>
-<li>Silinmesini isteme</li>
-<li>İşlemeye itiraz etme</li>
-<li>Verilerin aktarıldığı üçüncü kişileri öğrenme</li>
-<li>İşlemenin sonucunda aleyhe bir sonuç doğarsa itiraz etme</li>
-<li>Kanuna aykırı işlemeden doğan zararın giderilmesini isteme</li>
-</ul>
-<p>Başvurularınızı e-posta ile iletebilirsiniz: <a href="mailto:paladinsvideos@gmail.com">paladinsvideos@gmail.com</a></p>
-
-<h2>11. Yürürlük</h2>
-<p>Bu politika 19 Ekim 2026 tarihinde yürürlüğe girmiştir. Değişiklik olursa bu sayfa güncellenir.</p>
+<h2>10. Değişiklikler</h2>
+<p>Bu politika değişirse bu sayfa güncellenir ve yürürlük tarihi değiştirilir.</p>
 </main>
 </body>
 </html>
